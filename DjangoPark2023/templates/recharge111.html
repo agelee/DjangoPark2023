@@ -1,0 +1,145 @@
+<!--    载入静态文件-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap -->
+    {#    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">#}
+    <!-- CSS files -->
+    <link href="{% static 'css/tabler.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/tabler-flags.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/tabler-payments.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/tabler-vendors.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/demo.min.css' %}" rel="stylesheet"/>
+    <title>会员充值</title>
+</head>
+<body>
+<script src="{% static 'js/demo-theme.min.js' %}"></script>
+<!-- 定义导航栏 -->
+<div class="page">
+    <!-- Sidebar -->
+    <aside class="navbar navbar-vertical navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <h1 class="navbar-brand navbar-brand-autodark">
+                <a href=".">
+                    <img src="./static/logo-white.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+                </a>
+            </h1>
+            <div class="collapse navbar-collapse" id="sidebar-menu">
+                <ul class="navbar-nav pt-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./">
+                  <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                         stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                         stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path
+                            d="M5 12l-2 0l9 -9l9 9l-2 0"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/><path
+                            d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg>
+                  </span>
+                            <span class="nav-link-title">
+                    Home
+                  </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    {#    <header class="navbar-expand-md">#}
+    {#        <div class="collapse navbar-collapse" id="navbar-menu">#}
+    {#            <div class="navbar navbar-light">#}
+    {#                <div class="container-xl">#}
+    {#                    <ul class="navbar-nav">#}
+    {#                        <li class="nav-item active">#}
+    {#                            <a class="nav-link" href="./">#}
+    {#                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->#}
+    {#                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"#}
+    {#                           stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"#}
+    {#                           stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path#}
+    {#                              d="M5 12l-2 0l9 -9l9 9l-2 0"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/><path#}
+    {#                              d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg>#}
+    {#                    </span>#}
+    {#                                <span class="nav-link-title">#}
+    {#                      Home#}
+    {#                    </span>#}
+    {#                            </a>#}
+    {#                        </li>#}
+    {#                    </ul>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </header>#}
+    <div class="page-wrapper">
+        <div class="page-header d-print-none">
+          <div class="container-xl">
+            <div class="row g-2 align-items-center">
+              <div class="col">
+                <!-- Page pre-title -->
+                <div class="page-pretitle">
+                  Overview
+                </div>
+                <h2 class="page-title">
+                  Vertical layout
+                </h2>
+              </div>
+              <!-- Page title actions -->
+              <div class="col-auto ms-auto d-print-none">
+                <div class="btn-list">
+                  <span class="d-none d-sm-inline">
+                    <a href="#" class="btn">
+                      New view
+                    </a>
+                  </span>
+                  <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-report">
+                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg>
+                    Create new report
+                  </a>
+                  <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-report" aria-label="Create new report">
+                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-body">
+            <div class="container-xl">
+                <div class="row row-deck row-cards">
+                    <br>
+                    <!-- 充值的表单 -->
+                    <form method="post" action=".">
+                        <!-- Django中需要POST数据的地方都必须有csrf_token -->
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <!-- 标签 -->
+                            <label for="title">车牌号</label>
+                            <!-- 文本框 -->
+                            <input type="text" class="form-control" id="carnum" name="carnum">
+                        </div>
+                        <!-- 充值套餐 -->
+                        <div class="form-group">
+                            <label for="body">充值天数</label>
+                            <!-- 文本区域 -->
+                            <input type="text" class="form-control" id="chargedays" name="chargedays" rows="6">
+                        </div>
+                        <!-- 提交按钮 -->
+                        <button type="submit" class="btn btn-primary">提交充值</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    {#<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->#}
+    {#<script src="https://code.jquery.com/jquery.js"></script>#}
+    {#<!-- jQuery UI -->#}
+    {#<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>#}
+    {#<!-- Include all compiled plugins (below), or include individual files as needed -->#}
+    {#<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>#}
+</body>
+</html>
